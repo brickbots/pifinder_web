@@ -20,4 +20,4 @@ https://cdsarc.u-strasbg.fr/ftp/cats/I/239/ReadMe
 
 ## Special Format
 
-Since we really only need the catalog ID, RA, DEC and Magnitude, we should probably come up with a format that works best for the front and and trim down/convert the HIP catalog.  RA/DEC are generally in Hour minute second or degree / second formats... so we may want to also convert these to decimal.  Whatever is most effective for the front-end! 
+Since we really only need the catalog ID, RA, DEC and Magnitude, we should probably come up with a format that works best for the front-end and trim down/convert the HIP catalog which includes tons of info we don't need.  RA/DEC are generally in Hour minute second or degree / second formats... so we may want to also convert these to decimal.  Whatever is most effective for the front-end! 
