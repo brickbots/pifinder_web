@@ -1,11 +1,13 @@
-//import { useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import Box from '@mui/material/Box'
 import {Canvas} from '@react-three/fiber'
 import {Scene} from './Scene.jsx'
+import {PerformanceMonitor} from '@react-three/drei'
 
 
 function App() {
+  const [dpr, setDpr] = useState(Math.min(window.devicePixelRatio, 2))
   return (
     <Box
       id="main-stage"
@@ -17,8 +19,9 @@ function App() {
       <Canvas
         linear
         gl={{alpha: true, antialias: true}}
-        dpr={Math.min(window.devicePixelRatio, 2)}
+        dpr={dpr}
       >
+        <PerformanceMonitor onIncline={() => setDpr(2)} onDecline={() => setDpr(1)} />
         <Scene />
       </Canvas>
     </Box>
